@@ -1,0 +1,16 @@
+{
+  "name": "infra-db-server",
+  "version": "0.0.1",
+  "description": "Server code for the distributed infra database",
+  "main": "index.js",
+  "author": "Brian Brunner",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.12.2",
+    "leveldown": "^2.1.1",
+    "levelup": "^2.0.1",
+    "mkdirp": "^0.5.1",
+    "node-rsa": "^0.4.2",
+    "web3": "^1.0.0-beta.26"
+  }
+}
