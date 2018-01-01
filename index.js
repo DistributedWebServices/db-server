@@ -15,7 +15,27 @@ program
   .command('run')
   .description('Run the database')
   .action(function(options) {
-    m.listen();
+    m.start();
+  });
+
+program
+  .command('metastats')
+  .action(function() {
+    m.start(function(err) {
+      console.log(m._db_infos);
+      process.exit();
+    });
+  });
+
+program
+  .command('dbstats <dbname>')
+  .action(function(dbname) {
+    m.start(function(err) {
+      m.get_stats(dbname, function(err, stats) {
+        console.log(stats);
+        process.exit();
+      });
+    });
   });
 
 program
